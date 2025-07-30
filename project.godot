@@ -13,3 +13,14 @@ config_version=5
 config/name="GMTK_GameJam"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://Entity/": "red",
+"res://Game/": "blue",
+"res://Levels/": "green",
+"res://UI/": "pink",
+"res://Utils/": "purple"
+}
