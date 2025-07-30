@@ -22,5 +22,6 @@ folder_colors={
 "res://Game/": "blue",
 "res://Levels/": "green",
 "res://UI/": "pink",
-"res://Utils/": "purple"
+"res://Utils/": "purple",
+"res://addons/": "teal"
 }
