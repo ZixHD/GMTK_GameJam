@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bu5e1b61l3ikp" path="res://Assets/TileSets/tiles.png" id="2_h31mt"]
 [ext_resource type="Script" uid="uid://v18p67m23gjk" path="res://Levels/Village/day-night-cycle.gd" id="3_5ifnn"]
 [ext_resource type="Texture2D" uid="uid://br8jj2tyms32o" path="res://Assets/daynight/daynightcycle-gradient-texture.tres" id="4_uhafy"]
-[ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Entity/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
+[ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Assets/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
 [ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
 
