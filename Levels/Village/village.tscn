@@ -5,4 +5,4 @@
 [node name="Village" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_i01ol")]
-speed = 400.0
+speed = 350.0
