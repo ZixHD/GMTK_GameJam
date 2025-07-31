@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr0btw83adxbt"
-path="res://.godot/imported/icon.svg-b6cfb719e56313e984ebebee23255dac.ctex"
+uid="uid://b3w7huy6nidko"
+path="res://.godot/imported/Sprite-0002.png-235991f1145502198f40f492df109eed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Utils/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-b6cfb719e56313e984ebebee23255dac.ctex"]
+source_file="res://Assets/Objects/Houses/House2/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-235991f1145502198f40f492df109eed.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

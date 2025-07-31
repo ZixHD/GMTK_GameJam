@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://7uhgcxm0n61t" path="res://Entity/Player/player.png" id="2_x1f5c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x1f5c"]
-radius = 8.0
+radius = 4.75
+height = 11.5
 
 [sub_resource type="Animation" id="Animation_viyt1"]
 length = 2.0
@@ -159,6 +160,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "83391e03c365e38e43d3b18c013f3f1f"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9.75)
 shape = SubResource("CapsuleShape2D_x1f5c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

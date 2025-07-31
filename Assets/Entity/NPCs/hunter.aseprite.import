@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cs2ssecr5url1"
+path="res://.godot/imported/hunter.aseprite-bf5ebcbf857aba4dd2508143cbea1c16.res"
+
+[deps]
+
+source_file="res://Assets/Entity/NPCs/hunter.aseprite"
+dest_files=["res://.godot/imported/hunter.aseprite-bf5ebcbf857aba4dd2508143cbea1c16.res"]
+
+[params]
+

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dbxx0oi6wfd5m" path="res://Levels/Screens/Intro/intro.gd" id="1_h3qj4"]
 [ext_resource type="Texture2D" uid="uid://dnb8ogbxtr4l2" path="res://Assets/Screens/Intro/Gtmk.png" id="2_qtj18"]
-[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="3_hssrx"]
+[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/interaction/interaction_area/interaction_area.tscn" id="3_hssrx"]
 
 [sub_resource type="Animation" id="Animation_hssrx"]
 length = 0.001
