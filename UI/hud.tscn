@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca5ifyetwukaf"]
+
+[ext_resource type="Script" uid="uid://gk3vrdowuueu" path="res://UI/hud.gd" id="1_ne75i"]
+[ext_resource type="FontFile" uid="uid://cpu6sw0ehen42" path="res://Utils/Font/LowresPixel-Regular.otf" id="2_bytes"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ne75i"]
+font_size = 50
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_ne75i")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 408.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 990.0
+offset_top = 18.0
+offset_right = 1115.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_bytes")
+theme_override_font_sizes/font_size = 16
+label_settings = SubResource("LabelSettings_ne75i")

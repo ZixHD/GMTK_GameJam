@@ -19,7 +19,12 @@ config/icon="res://icon.svg"
 
 GameManager="*res://Game/Singleton/GameManager/game_manager.tscn"
 DialogueManager="*res://Game/Singleton/DialogueManager/dialogue_manager.tscn"
-InteractionManager="*res://Utils/interaction/interaction_manager/InteractionManager.tscn"
+InteractionManager="*res://Utils/Interaction/interaction_manager/InteractionManager.tscn"
+Hud="*res://UI/hud.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
 
 [file_customization]
 
