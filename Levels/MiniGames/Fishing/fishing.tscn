@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1p6rcibegyf7"]
+
+[ext_resource type="Texture2D" uid="uid://baidtos1jnpr1" path="res://Assets/Fishing/fishing_sprites.png" id="1_j3ylo"]
+
+[node name="Fishing" type="Node"]
+
+[node name="Fish" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Fish"]
+texture_filter = 1
+texture = ExtResource("1_j3ylo")
+hframes = 13
+vframes = 9
+frame = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
