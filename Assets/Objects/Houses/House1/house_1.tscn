@@ -18,7 +18,6 @@ position = Vector2(2.8, -10.2)
 
 [node name="Transparent" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.800005, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r3ubg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -26,7 +25,6 @@ texture = ExtResource("1_wlihb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3.6, 24)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wlihb")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,12 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://do8av1drgw4un"]
+[gd_scene load_steps=5 format=3 uid="uid://do8av1drgw4un"]
 
+[ext_resource type="Script" uid="uid://4ljd2junx05m" path="res://Assets/Objects/Houses/House1/house_1.gd" id="1_r3ubg"]
 [ext_resource type="Texture2D" uid="uid://bk33w0tdc750f" path="res://Assets/Objects/Houses/House1/house_1.png" id="1_wlihb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3ubg"]
+size = Vector2(92, 34.6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlihb"]
 size = Vector2(92.4, 28.8)
 
 [node name="House1" type="StaticBody2D"]
 scale = Vector2(1.25, 1.25)
+script = ExtResource("1_r3ubg")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(6.8, 9.8)
+scale = Vector2(1, 1)
+
+[node name="Transparent" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -22.9)
+shape = SubResource("RectangleShape2D_r3ubg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wlihb")
@@ -14,3 +27,6 @@ texture = ExtResource("1_wlihb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 20)
 shape = SubResource("RectangleShape2D_wlihb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
