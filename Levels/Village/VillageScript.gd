@@ -1,9 +1,11 @@
 extends Node2D
 
+@onready var input_settings: Control = $HUD/InputSettings
 
 
 var lights_on = false;
 var time_label = null;
+var game_paused = false;
 
 func _ready() -> void:
 	$CanvasModulate.connect("time_tick", Callable(self, "_on_time_tick"))
@@ -27,3 +29,15 @@ func enable_lights(state: bool) -> void:
 	print($Lights.get_children())
 	for staticbody2d in $Lights.get_children():
 		staticbody2d.enable_light(state)
+		
+		
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		game_paused = !game_paused
+		if game_paused:
+			Engine.time_scale = 0
+			input_settings.visible = true;
+		else:
+			Engine.time_scale = 1
+			input_settings.visible = false;
+		get_tree().root.get_viewport().set_input_as_handled()

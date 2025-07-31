@@ -60,22 +60,23 @@ func _readingAnimations(last_state: state):
 
 
 func _process(delta: float) -> void:
-	if(player_state != state.PAUSED):
+	if(player_state != state.PAUSED and Engine.time_scale == 1):
 		movement(delta)
+
 	
 
 
 func movement(_delta:float) -> void:
-	input.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
-	input.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
+	input.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
+	input.y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
 
-	if(Input.is_action_pressed("left")):
+	if(Input.is_action_pressed("move_left")):
 		player_state = state.WALK_LEFT
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("move_right"):
 		player_state = state.WALK_RIGHT
-	if Input.is_action_pressed("down"):
+	if Input.is_action_pressed("move_down"):
 		player_state = state.WALK_DOWN
-	if Input.is_action_pressed("up"):
+	if Input.is_action_pressed("move_up"):
 		player_state = state.WALK_UP
 		
 	

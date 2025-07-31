@@ -7,7 +7,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		print("opvde")
 		var tex_rect = TextureRect.new()
 		var texture = load("res://icon.svg")
 		tex_rect.texture = texture
