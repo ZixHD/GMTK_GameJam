@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0aq8ixm4lpnr"]
+
+[node name="WhackAMole" type="Node2D"]
+
+[node name="MoleTimer" type="Timer" parent="."]
+
+[node name="MoleSpawnPoints" type="Node2D" parent="."]
