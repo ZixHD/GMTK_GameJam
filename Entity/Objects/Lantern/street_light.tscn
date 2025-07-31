@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bumn4tud4wuck"]
 
-[ext_resource type="Script" uid="uid://bwa7nsiy2e8le" path="res://Entity/Objects/street_light.gd" id="1_qgxlv"]
+[ext_resource type="Script" uid="uid://bwa7nsiy2e8le" path="res://Entity/Objects/Lantern/street_light.gd" id="1_qgxlv"]
 [ext_resource type="Texture2D" uid="uid://d0s704q1pyrhb" path="res://Assets/Objects/Lantern/lantern.png" id="2_dc6pl"]
 [ext_resource type="Texture2D" uid="uid://88k31q4ply83" path="res://Assets/Lights/circle.png" id="2_qgxlv"]
 
