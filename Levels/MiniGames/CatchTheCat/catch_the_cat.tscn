@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmp3xljte8tw4"]
+
+[ext_resource type="PackedScene" uid="uid://bvf55glceexvf" path="res://Entity/Minigames/Cat/cat.tscn" id="1_hym2a"]
+[ext_resource type="Script" uid="uid://c6idogu3ctjqb" path="res://Levels/MiniGames/CatchTheCat/catch_the_cat.gd" id="1_xaawa"]
+[ext_resource type="PackedScene" uid="uid://xsld0t0bvern" path="res://Entity/Minigames/Cat/bucket.tscn" id="2_f6qt0"]
+
+[sub_resource type="Animation" id="Animation_xaawa"]
+resource_name = "loop"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bucket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(79, 561), Vector2(1066, 561)]
+}
+
+[sub_resource type="Animation" id="Animation_enxsn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bucket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(79, 561)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cr88w"]
+_data = {
+&"RESET": SubResource("Animation_enxsn"),
+&"loop": SubResource("Animation_xaawa")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xaawa"]
+size = Vector2(1550, 13)
+
+[node name="CatchTheCat" type="Node"]
+script = ExtResource("1_xaawa")
+
+[node name="Cat" parent="." instance=ExtResource("1_hym2a")]
+position = Vector2(662, 97)
+
+[node name="Bucket" parent="." instance=ExtResource("2_f6qt0")]
+position = Vector2(79, 561)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cr88w")
+}
+
+[node name="KillZone" type="Area2D" parent="."]
+position = Vector2(500, 783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_xaawa")
+
+[node name="EndScreen" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="EndScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="body_entered" from="Bucket" to="." method="_on_bucket_body_entered"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
