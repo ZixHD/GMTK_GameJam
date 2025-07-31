@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=11 format=3 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
 [ext_resource type="Texture2D" uid="uid://bu5e1b61l3ikp" path="res://Assets/TileSets/tiles.png" id="2_h31mt"]
 [ext_resource type="Script" uid="uid://v18p67m23gjk" path="res://Levels/Village/day-night-cycle.gd" id="3_5ifnn"]
 [ext_resource type="Texture2D" uid="uid://br8jj2tyms32o" path="res://Assets/daynight/daynightcycle-gradient-texture.tres" id="4_uhafy"]
-[ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/street_light.tscn" id="6_7027k"]
+[ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Entity/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
+[ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3uhvb"]
@@ -560,11 +561,6 @@ sources/1 = SubResource("TileSetAtlasSource_3uhvb")
 [node name="Village" type="Node2D"]
 script = ExtResource("1_uhafy")
 
-[node name="Player" parent="." instance=ExtResource("1_i01ol")]
-position = Vector2(1026, 83)
-scale = Vector2(0.5, 0.5)
-speed = 400.0
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5ifnn")
 format = 2
@@ -576,19 +572,22 @@ color = Color(0.329155, 0.38987, 0.662112, 1)
 script = ExtResource("3_5ifnn")
 gradient = ExtResource("4_uhafy")
 
-[node name="Timelabel" type="Label" parent="."]
-offset_left = 138.0
-offset_top = 114.0
-offset_right = 237.0
-offset_bottom = 137.0
-text = "dasdasasdas"
+[node name="Houses" type="Node" parent="."]
+
+[node name="House1" parent="Houses" instance=ExtResource("5_03oyn")]
+position = Vector2(1045, 67)
 
 [node name="Lights" type="Node2D" parent="."]
 
 [node name="StreetLight" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(686, -211)
+position = Vector2(381, 300)
 
 [node name="StreetLight2" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(223, 330)
+position = Vector2(316, 300)
+
+[node name="Player" parent="." instance=ExtResource("1_i01ol")]
+position = Vector2(964, 113)
+scale = Vector2(1, 1)
+speed = 200.0
 
 [node name="HUD" parent="." instance=ExtResource("7_ewgnt")]
