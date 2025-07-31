@@ -9,7 +9,8 @@ var player_state = state.IDLE_LEFT
 
 
 func _update_animation():
-	print("")
+	pass
+	#print("")
 
 func _process(delta: float) -> void:
 	movement(delta)
