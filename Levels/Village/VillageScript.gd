@@ -1,9 +1,17 @@
 extends Node2D
 
+@onready var timelabel: Label = $Timelabel
+
 var lights_on = false;
 
 func _ready() -> void:
 	$CanvasModulate.connect("time_tick", Callable(self, "_on_time_tick"))
+
+func _process(_delta: float) -> void:
+	if timelabel.text == "17:00":
+		$AnimationPlayer.play("Night_falling")
+	elif timelabel.text == "03:00":
+		$AnimationPlayer.play_backwards("Night_falling")
 
 func _on_time_tick(hour: int, minute: int) -> void:
 	var time_label = Hud.get_child(1);
