@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://coon3wwntg0xb"]
+
+[ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
+
+[node name="Village" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_i01ol")]
+speed = 400.0

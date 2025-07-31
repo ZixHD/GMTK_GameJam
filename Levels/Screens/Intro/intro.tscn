@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ds200vh54br31"]
+[gd_scene load_steps=7 format=3 uid="uid://ds200vh54br31"]
 
 [ext_resource type="Script" uid="uid://dbxx0oi6wfd5m" path="res://Levels/Screens/Intro/intro.gd" id="1_h3qj4"]
 [ext_resource type="Texture2D" uid="uid://dnb8ogbxtr4l2" path="res://Assets/Screens/Intro/Gtmk.png" id="2_qtj18"]
+[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/interaction/interaction_area/interaction_area.tscn" id="3_hssrx"]
 
 [sub_resource type="Animation" id="Animation_qtj18"]
 resource_name = "intro"
@@ -68,3 +69,5 @@ expand_mode = 1
 libraries = {
 &"": SubResource("AnimationLibrary_hssrx")
 }
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_hssrx")]
