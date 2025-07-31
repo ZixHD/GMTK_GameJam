@@ -1,7 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvf55glceexvf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kaaeb"]
-load_path = "res://.godot/imported/icon.svg-aff5ab3fb04385d0b29e4077c68bf850.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ce7v"]
 size = Vector2(129, 121)

@@ -6,6 +6,7 @@ var interact: Callable = func():
 
 
 func _on_body_entered(_body: Node2D) -> void:
+	print("radi")
 	InteractionManager.register_area(self)
 	pass # Replace with function body.
 
