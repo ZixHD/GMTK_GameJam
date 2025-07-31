@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=13 format=3 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
 [ext_resource type="Texture2D" uid="uid://bu5e1b61l3ikp" path="res://Assets/TileSets/tiles.png" id="2_h31mt"]
 [ext_resource type="Script" uid="uid://v18p67m23gjk" path="res://Levels/Village/day-night-cycle.gd" id="3_5ifnn"]
 [ext_resource type="Texture2D" uid="uid://br8jj2tyms32o" path="res://Assets/daynight/daynightcycle-gradient-texture.tres" id="4_uhafy"]
-[ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Assets/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
+[ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Entity/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
+[ext_resource type="PackedScene" uid="uid://b58u1w6wfd1rr" path="res://Entity/Objects/Houses/House2/house_2.tscn" id="6_8jtfi"]
 [ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
 [ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://Levels/Screens/InputSettings/input_settings.tscn" id="9_unp84"]
@@ -578,13 +579,16 @@ gradient = ExtResource("4_uhafy")
 [node name="House1" parent="Houses" instance=ExtResource("5_03oyn")]
 position = Vector2(1045, 67)
 
+[node name="House2" parent="Houses" instance=ExtResource("6_8jtfi")]
+position = Vector2(154, 98)
+
 [node name="Lights" type="Node2D" parent="."]
 
 [node name="StreetLight" parent="Lights" instance=ExtResource("6_7027k")]
 position = Vector2(381, 300)
 
 [node name="StreetLight2" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(316, 300)
+position = Vector2(419, 332)
 
 [node name="Player" parent="." instance=ExtResource("1_i01ol")]
 position = Vector2(964, 113)

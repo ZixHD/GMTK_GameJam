@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xsld0t0bvern"]
 
-[ext_resource type="Texture2D" uid="uid://drhmnwtcrkhqq" path="res://Levels/icon.svg" id="1_oec4i"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kaaeb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oec4i"]
 size = Vector2(64, 6.5)
@@ -8,7 +8,7 @@ size = Vector2(64, 6.5)
 [node name="Bucket" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_oec4i")
+texture = SubResource("CompressedTexture2D_kaaeb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 31.75)

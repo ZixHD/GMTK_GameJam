@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvf55glceexvf"]
 
-[ext_resource type="Texture2D" uid="uid://drhmnwtcrkhqq" path="res://Levels/icon.svg" id="1_7ce7v"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kaaeb"]
+load_path = "res://.godot/imported/icon.svg-aff5ab3fb04385d0b29e4077c68bf850.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ce7v"]
 size = Vector2(129, 121)
@@ -8,7 +9,7 @@ size = Vector2(129, 121)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Cat" type="Sprite2D" parent="."]
-texture = ExtResource("1_7ce7v")
+texture = SubResource("CompressedTexture2D_kaaeb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
