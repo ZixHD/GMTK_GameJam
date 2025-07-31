@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cfbivdj47ofr5"
+path="res://.godot/imported/gardenman.aseprite-66c7bff5ec478c6fa31dc9296c5435d7.res"
+
+[deps]
+
+source_file="res://Assets/Entity/NPCs/gardenman.aseprite"
+dest_files=["res://.godot/imported/gardenman.aseprite-66c7bff5ec478c6fa31dc9296c5435d7.res"]
+
+[params]
+
