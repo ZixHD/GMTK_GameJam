@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=8 format=3 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
+[ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
 [ext_resource type="Texture2D" uid="uid://bu5e1b61l3ikp" path="res://Assets/TileSets/tiles.png" id="2_h31mt"]
 [ext_resource type="Script" uid="uid://v18p67m23gjk" path="res://Levels/Village/day-night-cycle.gd" id="3_5ifnn"]
 [ext_resource type="Texture2D" uid="uid://br8jj2tyms32o" path="res://Assets/daynight/daynightcycle-gradient-texture.tres" id="4_uhafy"]
@@ -555,6 +556,7 @@ texture = ExtResource("2_h31mt")
 sources/1 = SubResource("TileSetAtlasSource_3uhvb")
 
 [node name="Village" type="Node2D"]
+script = ExtResource("1_uhafy")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5ifnn")
@@ -568,3 +570,10 @@ speed = 400.0
 color = Color(0.329155, 0.38987, 0.662112, 1)
 script = ExtResource("3_5ifnn")
 gradient = ExtResource("4_uhafy")
+
+[node name="Timelabel" type="Label" parent="."]
+offset_left = 138.0
+offset_top = 114.0
+offset_right = 237.0
+offset_bottom = 137.0
+text = "dasdasasdas"
