@@ -20,3 +20,8 @@ func _on_options_pressed() -> void:
 	settings.visible = true;
 	buttons.visible = false;
 	
+
+
+func _on_resume_2_pressed() -> void:
+	settings.visible = false;
+	buttons.visible = true;
