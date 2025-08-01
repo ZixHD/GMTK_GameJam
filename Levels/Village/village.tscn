@@ -1,12 +1,12 @@
-[gd_scene load_steps=26 format=4 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=27 format=4 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
 [ext_resource type="Script" uid="uid://v18p67m23gjk" path="res://Levels/Village/day-night-cycle.gd" id="3_5ifnn"]
 [ext_resource type="Texture2D" uid="uid://banetxwjefif8" path="res://Assets/TileSets/tileset_lake.png" id="3_82lha"]
-[ext_resource type="PackedScene" uid="uid://v5b8x4d0xgqt" path="res://Assets/Objects/Houses/House2/house_2.tscn" id="4_8jtfi"]
 [ext_resource type="Texture2D" uid="uid://br8jj2tyms32o" path="res://Assets/daynight/daynightcycle-gradient-texture.tres" id="4_uhafy"]
 [ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Entity/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
+[ext_resource type="PackedScene" uid="uid://baplxg60bwua" path="res://Entity/Objects/Houses/House3/house_3.tscn" id="5_wyk4p"]
 [ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
 [ext_resource type="PackedScene" uid="uid://drqclkarhupnx" path="res://Entity/NPCs/Dog/dog.tscn" id="8_wyk4p"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bbchh167r6lu3" path="res://Entity/NPCs/Kid/kid.tscn" id="13_bjdx3"]
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
 [ext_resource type="PackedScene" uid="uid://c87fnoo6wcydy" path="res://Entity/NPCs/Fisherman/fisherman.tscn" id="14_3nvq8"]
+[ext_resource type="PackedScene" uid="uid://dj63lxtt5q7g4" path="res://Entity/Objects/Houses/House2/house_2.tscn" id="21_jch05"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dggnu"]
 texture = ExtResource("13_tc7al")
@@ -79,8 +80,11 @@ tile_set = SubResource("TileSet_dggnu")
 [node name="House1" parent="Houses" instance=ExtResource("5_03oyn")]
 position = Vector2(1046, 85)
 
-[node name="House2" parent="Houses" instance=ExtResource("4_8jtfi")]
-position = Vector2(150, 118)
+[node name="House2" parent="Houses" instance=ExtResource("21_jch05")]
+position = Vector2(154, 123)
+
+[node name="House3" parent="Houses" instance=ExtResource("5_wyk4p")]
+position = Vector2(233, 306)
 
 [node name="Lights" type="Node2D" parent="."]
 
@@ -99,7 +103,7 @@ position = Vector2(890, 179)
 [node name="Entities" type="Node" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("1_i01ol")]
-position = Vector2(572, 172)
+position = Vector2(337, 373)
 scale = Vector2(1, 1)
 speed = 200.0
 
