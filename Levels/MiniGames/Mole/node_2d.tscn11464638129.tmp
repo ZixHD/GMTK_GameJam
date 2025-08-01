@@ -20,27 +20,24 @@ radius = 24.9699
 scale = Vector2(1.00798, 0.989318)
 script = ExtResource("1_36d3w")
 
+[node name="score_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Mapa" type="Sprite2D" parent="."]
 position = Vector2(574.15, 328.973)
 scale = Vector2(0.992552, 1.00936)
 texture = ExtResource("1_b8gpv")
 
 [node name="Krtina1" type="Sprite2D" parent="."]
-light_mask = 3
-visibility_layer = 3
 position = Vector2(351.199, 186.997)
 texture = ExtResource("2_b8gpv")
 
 [node name="Area2D" type="Area2D" parent="Krtina1"]
-light_mask = 3
-visibility_layer = 3
 position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
+scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina1/Area2D"]
-light_mask = 3
-visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
 [node name="Krtina2" type="Sprite2D" parent="."]
@@ -49,12 +46,9 @@ texture = ExtResource("4_suaje")
 
 [node name="Area2D" type="Area2D" parent="Krtina2"]
 position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
+scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina2/Area2D"]
-light_mask = 3
-visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
 [node name="Krtina3" type="Sprite2D" parent="."]
@@ -63,12 +57,9 @@ texture = ExtResource("5_uppws")
 
 [node name="Area2D" type="Area2D" parent="Krtina3"]
 position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
+scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina3/Area2D"]
-light_mask = 3
-visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
 [node name="Krtina4" type="Sprite2D" parent="."]
@@ -77,35 +68,20 @@ texture = ExtResource("6_det1y")
 
 [node name="Area2D" type="Area2D" parent="Krtina4"]
 position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
+scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina4/Area2D"]
-light_mask = 3
-visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("8_det1y")
-
-[node name="Cekic" type="Sprite2D" parent="Node2D"]
+[node name="Cekic" type="Sprite2D" parent="."]
 position = Vector2(221.235, 132.414)
 texture = ExtResource("7_uppws")
+script = ExtResource("8_det1y")
 
-[node name="Area2D" type="Area2D" parent="Node2D/Cekic"]
+[node name="Area2D" type="Area2D" parent="Cekic"]
 position = Vector2(36.7072, -90.9717)
-collision_layer = 3
-collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cekic/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cekic/Area2D"]
 position = Vector2(49.6043, 19.2051)
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_mwm4x")
-
-[node name="score_label" type="Label" parent="."]
-offset_left = 23.8101
-offset_top = 33.3563
-offset_right = 63.8101
-offset_bottom = 56.3563
-text = "0"
-
-[connection signal="body_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_body_entered"]
