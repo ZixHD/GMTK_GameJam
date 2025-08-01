@@ -11,6 +11,7 @@ extends Node2D
 @onready var krtina_4: Sprite2D = $Krtina4/Krtina4
 @onready var score_label: Label = $score_label
 @onready var victory: Label = $victory
+@onready var score_up: AudioStreamPlayer2D = $SFX/ScoreUp
 
 @onready var moles = [$Krtina1, $Krtina2, $Krtina3, $Krtina4]
 var score := 0
@@ -55,8 +56,10 @@ func add_score():
 	if score_label:
 		score_label.text = str(score)
 		print("Score: ", score)
+		score_up.play()
 		#Display Numbers, and sound
 		if score >= 5: 
+			await score_up.finished
 			krtina_1.visible = false
 			krtina_2.visible = false
 			krtina_3.visible = false

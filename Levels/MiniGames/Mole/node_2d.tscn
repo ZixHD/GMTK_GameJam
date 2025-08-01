@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b4u77nlbj42fr"]
+[gd_scene load_steps=17 format=3 uid="uid://b4u77nlbj42fr"]
 
 [ext_resource type="Script" uid="uid://b8prnnvjwkukf" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
 [ext_resource type="Texture2D" uid="uid://ui5vlg8xbolv" path="res://Levels/MiniGames/Mole/Mapa2.png" id="1_b8gpv"]
@@ -11,6 +11,8 @@
 [ext_resource type="FontFile" uid="uid://cpu6sw0ehen42" path="res://Utils/Font/LowresPixel-Regular.otf" id="9_det1y"]
 [ext_resource type="PackedScene" uid="uid://bp586yrcwjfe8" path="res://Assets/Effects/dust_particles_jump_left.tscn" id="9_mrwdo"]
 [ext_resource type="PackedScene" uid="uid://crog2nt7mj08n" path="res://Assets/Effects/dust_particles_jump_right.tscn" id="11_p7wow"]
+[ext_resource type="AudioStream" uid="uid://bufmr6dh38ifv" path="res://Assets/Audio/MoleGame/mole_hit.wav" id="12_h82j7"]
+[ext_resource type="AudioStream" uid="uid://bqodcvcuiiisg" path="res://Assets/Audio/MoleGame/+1.wav" id="13_p7wow"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwm4x"]
 radius = 53.5727
@@ -157,6 +159,16 @@ theme_override_fonts/font = ExtResource("9_det1y")
 theme_override_font_sizes/font_size = 16
 text = "0"
 label_settings = SubResource("LabelSettings_mwm4x")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="GroundHit" type="AudioStreamPlayer2D" parent="SFX"]
+scale = Vector2(1.00798, 0.989318)
+stream = ExtResource("12_h82j7")
+
+[node name="ScoreUp" type="AudioStreamPlayer2D" parent="SFX"]
+scale = Vector2(1.00798, 0.989318)
+stream = ExtResource("13_p7wow")
 
 [connection signal="area_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_body_entered"]

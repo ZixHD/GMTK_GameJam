@@ -6,6 +6,7 @@ extends Node2D
 @export var respawn_delay := 3.0
 @onready var dust_particles_jump_left: GPUParticles2D = $Cekic/DustParticlesJumpLeft
 @onready var dust_particles_jump_right: GPUParticles2D = $Cekic/DustParticlesJumpRight
+@onready var ground_hit: AudioStreamPlayer2D = $"../SFX/GroundHit"
 
 @onready var area: Area2D = $Cekic/Area2D
 
@@ -47,6 +48,7 @@ func play_hit():
 	await get_tree().create_timer(0.1).timeout
 	area.monitoring = true
 	_spawn_jump_dust()
+	ground_hit.play()
 	#particles
 	
 	await get_tree().create_timer(swing_duration).timeout
