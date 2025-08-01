@@ -1,4 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://coon3wwntg0xb"]
+
+[gd_scene load_steps=16 format=3 uid="uid://coon3wwntg0xb"]
+
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
@@ -12,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://Levels/Screens/Settings/settings.tscn" id="10_8jtfi"]
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
+
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dggnu"]
 texture = ExtResource("13_tc7al")
@@ -117,6 +121,7 @@ position = Vector2(990.8, 191.8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mole/InteractionArea"]
 shape = SubResource("RectangleShape2D_tc7al")
 
+
 [node name="Markers" type="Node" parent="."]
 
 [node name="MarkerTop" type="Marker2D" parent="Markers"]
@@ -130,3 +135,4 @@ position = Vector2(0, 321)
 
 [node name="MarkerRight" type="Marker2D" parent="Markers"]
 position = Vector2(1153, 323)
+
