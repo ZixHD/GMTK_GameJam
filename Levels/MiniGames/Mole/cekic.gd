@@ -49,3 +49,18 @@ func play_hit():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("radi")
 	pass # Replace with function body.
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if is_hitting:
+		if area.visible:
+			area.visible = false
+			get_parent().add_score()
+
+#collider after short delay
+		await get_tree().create_timer(0.2).timeout
+		area.monitoring = false
+		area.visible = true
+		is_hitting = false
+		
+	
