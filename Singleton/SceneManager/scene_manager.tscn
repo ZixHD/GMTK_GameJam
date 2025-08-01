@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wio7852jeel"]
+
+[ext_resource type="Script" uid="uid://gkmdptd0mv58" path="res://Singleton/SceneManager/scene_manager.gd" id="1_pcbkf"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_pcbkf")

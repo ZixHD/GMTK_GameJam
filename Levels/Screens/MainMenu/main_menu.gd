@@ -25,3 +25,8 @@ func _on_options_pressed() -> void:
 func _on_resume_2_pressed() -> void:
 	settings.visible = false;
 	buttons.visible = true;
+
+
+func _on_start_pressed() -> void:
+	await queue_free()
+	SceneManager._start_game()

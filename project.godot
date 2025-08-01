@@ -11,16 +11,17 @@ config_version=5
 [application]
 
 config/name="GMTK_GameJam"
-run/main_scene="uid://coon3wwntg0xb"
+run/main_scene="uid://cqam5lpaf7noh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://Game/Singleton/GameManager/game_manager.tscn"
-DialogueManager="*res://Game/Singleton/DialogueManager/dialogue_manager.tscn"
+GameManager="*res://Singleton/GameManager/game_manager.tscn"
+DialogueManager="*res://Singleton/DialogueManager/dialogue_manager.tscn"
 InteractionManager="*res://Utils/Interaction/interaction_manager/InteractionManager.tscn"
 Hud="*res://UI/hud.tscn"
+SceneManager="*res://Singleton/SceneManager/scene_manager.tscn"
 
 [editor_plugins]
 
@@ -31,8 +32,8 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
 folder_colors={
 "res://Assets/": "orange",
 "res://Entity/": "red",
-"res://Game/": "blue",
 "res://Levels/": "green",
+"res://Singleton/": "blue",
 "res://UI/": "pink",
 "res://Utils/": "purple",
 "res://addons/": "teal"

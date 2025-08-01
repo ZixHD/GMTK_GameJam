@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b42dub46u4w1v"]
 
-[ext_resource type="Script" uid="uid://7dvnaj3bvod7" path="res://Game/Singleton/DialogueManager/dialogue_manager.gd" id="1_1hnhe"]
+[ext_resource type="Script" uid="uid://7dvnaj3bvod7" path="res://Singleton/DialogueManager/dialogue_manager.gd" id="1_1hnhe"]
 
 [node name="DialogueManager" type="Node"]
 script = ExtResource("1_1hnhe")

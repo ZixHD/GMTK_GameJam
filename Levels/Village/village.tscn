@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://Levels/Screens/Settings/settings.tscn" id="10_8jtfi"]
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
-[ext_resource type="PackedScene" uid="uid://chag3bqhw5xhd" path="res://Levels/MiniGames/Mole/node_2d.tscn" id="13_82lha"]
+[ext_resource type="PackedScene" uid="uid://chag3bqhw5xhd" path="res://Levels/MiniGames/Mole/mole.tscn" id="13_82lha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tc7al"]
 size = Vector2(24, 24)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://by88lr47yw5hw"]
 
 [ext_resource type="Script" uid="uid://jtvqtoic8q81" path="res://Levels/Screens/Settings/settings.gd" id="1_kb38p"]
-[ext_resource type="PackedScene" uid="uid://dw4bg1cc3wnf7" path="res://Game/Audio/volume_slider.tscn" id="1_xtqq6"]
+[ext_resource type="PackedScene" uid="uid://dw4bg1cc3wnf7" path="res://Singleton/Audio/volume_slider.tscn" id="1_xtqq6"]
 [ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://Levels/Screens/InputSettings/input_settings.tscn" id="3_3yai5"]
 
 [node name="Settings" type="Control"]
