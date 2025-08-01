@@ -55,4 +55,12 @@ focus_mode = 0
 theme_override_fonts/font = ExtResource("3_j8q3s")
 text = "Reset to default"
 
+[node name="BackButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_j8q3s")
+text = "Back"
+
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

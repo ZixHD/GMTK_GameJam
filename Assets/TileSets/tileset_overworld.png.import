@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcfsljdj3kj3e"
-path="res://.godot/imported/lantern.png-fedf00186d3c98c349d5562090eb31f8.ctex"
+uid="uid://de38mblvdixbn"
+path="res://.godot/imported/tileset_overworld.png-3a172a105e79d2645923d651d80228fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/lantern.png"
-dest_files=["res://.godot/imported/lantern.png-fedf00186d3c98c349d5562090eb31f8.ctex"]
+source_file="res://Assets/TileSets/tileset_overworld.png"
+dest_files=["res://.godot/imported/tileset_overworld.png-3a172a105e79d2645923d651d80228fc.ctex"]
 
 [params]
 

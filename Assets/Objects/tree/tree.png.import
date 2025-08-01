@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxt36ohtjklrt"
-path="res://.godot/imported/fishing_rod_hud.png-0e21b77134879a9882750f2ad97e83f2.ctex"
+uid="uid://b731yy0i3a2xx"
+path="res://.godot/imported/tree.png-be0c6c31aab8e36a367d18c0d49c3205.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fishing/fishing_rod_hud.png"
-dest_files=["res://.godot/imported/fishing_rod_hud.png-0e21b77134879a9882750f2ad97e83f2.ctex"]
+source_file="res://Assets/Objects/tree/tree.png"
+dest_files=["res://.godot/imported/tree.png-be0c6c31aab8e36a367d18c0d49c3205.ctex"]
 
 [params]
 

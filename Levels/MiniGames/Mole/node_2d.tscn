@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=13 format=3 uid="uid://chag3bqhw5xhd"]
 
 [ext_resource type="Script" uid="uid://b8prnnvjwkukf" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
@@ -17,8 +18,10 @@ height = 129.382
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwm4x"]
 radius = 24.9699
 
+
 [sub_resource type="LabelSettings" id="LabelSettings_mwm4x"]
 font_size = 50
+
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00798, 0.989318)
@@ -105,6 +108,7 @@ collision_mask = 3
 position = Vector2(49.6043, 19.2051)
 shape = SubResource("CircleShape2D_mwm4x")
 
+
 [node name="Dodatni text" type="Label" parent="."]
 offset_left = 39.6833
 offset_top = 11.1188
@@ -135,6 +139,7 @@ theme_override_fonts/font = ExtResource("9_det1y")
 theme_override_font_sizes/font_size = 16
 text = "0"
 label_settings = SubResource("LabelSettings_mwm4x")
+
 
 [connection signal="area_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_body_entered"]

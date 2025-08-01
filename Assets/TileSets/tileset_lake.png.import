@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxt36ohtjklrt"
-path="res://.godot/imported/fishing_rod_hud.png-0e21b77134879a9882750f2ad97e83f2.ctex"
+uid="uid://banetxwjefif8"
+path="res://.godot/imported/tileset_lake.png-26ee1209edc57381938fc68255fc331d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fishing/fishing_rod_hud.png"
-dest_files=["res://.godot/imported/fishing_rod_hud.png-0e21b77134879a9882750f2ad97e83f2.ctex"]
+source_file="res://Assets/TileSets/tileset_lake.png"
+dest_files=["res://.godot/imported/tileset_lake.png-26ee1209edc57381938fc68255fc331d.ctex"]
 
 [params]
 
