@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://Levels/Screens/Settings/settings.tscn" id="10_8jtfi"]
-[ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://Levels/Screens/InputSettings/input_settings.tscn" id="9_unp84"]
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
 [ext_resource type="PackedScene" uid="uid://chag3bqhw5xhd" path="res://Levels/MiniGames/Mole/node_2d.tscn" id="13_82lha"]
