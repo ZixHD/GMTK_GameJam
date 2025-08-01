@@ -78,10 +78,10 @@ position = Vector2(150, 118)
 [node name="Lights" type="Node2D" parent="."]
 
 [node name="StreetLight" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(247, 179)
+position = Vector2(225, 179)
 
 [node name="StreetLight2" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(466, 179)
+position = Vector2(467, 179)
 
 [node name="StreetLight3" parent="Lights" instance=ExtResource("6_7027k")]
 position = Vector2(687, 179)
