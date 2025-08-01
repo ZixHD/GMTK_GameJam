@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://drqclkarhupnx"]
+
+[ext_resource type="Script" uid="uid://cjxanwdw71deh" path="res://Entity/NPCs/Dog/dog.gd" id="1_lfjwl"]
+[ext_resource type="Texture2D" uid="uid://c7n5gvecm0w72" path="res://Entity/NPCs/Dog/dog.png" id="1_y8r6n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfjwl"]
+radius = 6.0
+height = 14.0
+
+[sub_resource type="Animation" id="Animation_lfjwl"]
+length = 0.66
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.22, 0.44),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_yc6nu"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.15),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ui88c"]
+_data = {
+&"idle": SubResource("Animation_yc6nu"),
+&"sad": SubResource("Animation_lfjwl")
+}
+
+[node name="Dog" type="CharacterBody2D"]
+script = ExtResource("1_lfjwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_y8r6n")
+hframes = 3
+vframes = 2
+frame = 3
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"slice": "",
+"source": "res://Assets/Entity/NPCs/dog.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "be7916c79a2a38fdcd6442b10c4e5b25"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_lfjwl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ui88c")
+}
+
+[node name="Timer" type="Timer" parent="."]

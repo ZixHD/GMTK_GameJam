@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=26 format=4 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
@@ -9,10 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://do8av1drgw4un" path="res://Entity/Objects/Houses/House1/house_1.tscn" id="5_03oyn"]
 [ext_resource type="PackedScene" uid="uid://bumn4tud4wuck" path="res://Entity/Objects/Lantern/street_light.tscn" id="6_7027k"]
 [ext_resource type="PackedScene" uid="uid://ca5ifyetwukaf" path="res://UI/hud.tscn" id="7_ewgnt"]
+[ext_resource type="PackedScene" uid="uid://drqclkarhupnx" path="res://Entity/NPCs/Dog/dog.tscn" id="8_wyk4p"]
+[ext_resource type="PackedScene" uid="uid://djdh5jjhb4oly" path="res://Entity/NPCs/Hunter/hunter.tscn" id="9_jch05"]
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://Levels/Screens/Settings/settings.tscn" id="10_8jtfi"]
+[ext_resource type="PackedScene" uid="uid://uuw816f185a6" path="res://Entity/NPCs/Girl/girl.tscn" id="10_hetn8"]
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
+[ext_resource type="PackedScene" uid="uid://dj3s83c4g2xjm" path="res://Entity/NPCs/Girl1/girl_1.tscn" id="11_tgoqq"]
+[ext_resource type="PackedScene" uid="uid://bby1i2ha235x3" path="res://Entity/NPCs/Gardener/gardener.tscn" id="12_5jamd"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
+[ext_resource type="PackedScene" uid="uid://bbchh167r6lu3" path="res://Entity/NPCs/Kid/kid.tscn" id="13_bjdx3"]
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
+[ext_resource type="PackedScene" uid="uid://c87fnoo6wcydy" path="res://Entity/NPCs/Fisherman/fisherman.tscn" id="14_3nvq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dggnu"]
 texture = ExtResource("13_tc7al")
@@ -89,10 +96,35 @@ position = Vector2(687, 179)
 [node name="StreetLight4" parent="Lights" instance=ExtResource("6_7027k")]
 position = Vector2(890, 179)
 
-[node name="Player" parent="." instance=ExtResource("1_i01ol")]
-position = Vector2(950, 137)
+[node name="Entities" type="Node" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("1_i01ol")]
+position = Vector2(572, 172)
 scale = Vector2(1, 1)
 speed = 200.0
+
+[node name="NPCs" type="Node" parent="Entities"]
+
+[node name="Dog" parent="Entities/NPCs" instance=ExtResource("8_wyk4p")]
+position = Vector2(961, 281)
+
+[node name="Hunter" parent="Entities/NPCs" instance=ExtResource("9_jch05")]
+position = Vector2(653, 137)
+
+[node name="Girl" parent="Entities/NPCs" instance=ExtResource("10_hetn8")]
+position = Vector2(660, 280)
+
+[node name="Girl1" parent="Entities/NPCs" instance=ExtResource("11_tgoqq")]
+position = Vector2(824, 286)
+
+[node name="Gardener" parent="Entities/NPCs" instance=ExtResource("12_5jamd")]
+position = Vector2(367, 319)
+
+[node name="Kid" parent="Entities/NPCs" instance=ExtResource("13_bjdx3")]
+position = Vector2(552, 104)
+
+[node name="Fisherman" parent="Entities/NPCs" instance=ExtResource("14_3nvq8")]
+position = Vector2(184, 226)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.329155, 0.38987, 0.662112, 1)
