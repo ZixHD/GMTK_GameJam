@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var settings: Control = $HUD/Settings
+@onready var camera: Camera2D = $Player/Camera2D
 
 
 
@@ -11,7 +12,10 @@ var game_paused = false;
 func _ready() -> void:
 	$CanvasModulate.connect("time_tick", Callable(self, "_on_time_tick"))
 	time_label = Hud.get_child(1);
-
+	camera.limit_left = 0
+	camera.limit_top = 0
+	camera.limit_bottom = 628
+	camera.limit_right = 2111
 func _process(_delta: float) -> void:
 	pass
 

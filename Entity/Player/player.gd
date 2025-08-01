@@ -13,12 +13,11 @@ var last_state_before_reading: state = state.IDLE_RIGHT;
 func _update_animation():
 	match(player_state):
 		state.IDLE_RIGHT:
-			animation.play("idle R")
+			animation.play("idel R")
 		state.IDLE_LEFT:
 			animation.play("idle L")
 		state.IDLE_UP:
-			#treba choda da doda jos idle up
-			animation.play("idle")
+			animation.play("idle back")
 		state.IDLE_DOWN:
 			animation.play("idle")
 		state.WALK_RIGHT:
