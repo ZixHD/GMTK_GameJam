@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://efdruj4xct10"
+path="res://.godot/imported/dog.aseprite-ef8228e8c5dbc6089b3908c8d77d1c92.res"
+
+[deps]
+
+source_file="res://Assets/Entity/NPCs/dog.aseprite"
+dest_files=["res://.godot/imported/dog.aseprite-ef8228e8c5dbc6089b3908c8d77d1c92.res"]
+
+[params]
+
