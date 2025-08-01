@@ -1,13 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4u77nlbj42fr"]
+[gd_scene load_steps=17 format=3 uid="uid://b4u77nlbj42fr"]
 
-[ext_resource type="Script" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/Mapa2.png" id="1_b8gpv"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/Krtina1.png" id="2_b8gpv"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/Krtina2.png" id="4_suaje"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/krtina3.png" id="5_uppws"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/Krtina4.png" id="6_det1y"]
-[ext_resource type="Texture2D" path="res://Levels/MiniGames/Mole/Cekic.png" id="7_uppws"]
-[ext_resource type="Script" path="res://Levels/MiniGames/Mole/cekic.gd" id="8_det1y"]
+[ext_resource type="Script" uid="uid://b8prnnvjwkukf" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
+[ext_resource type="Texture2D" uid="uid://ui5vlg8xbolv" path="res://Levels/MiniGames/Mole/Mapa2.png" id="1_b8gpv"]
+[ext_resource type="Texture2D" uid="uid://bpr0bxtf1cpv1" path="res://Levels/MiniGames/Mole/Krtina1.png" id="2_b8gpv"]
+[ext_resource type="Texture2D" uid="uid://cye2tyctrcf20" path="res://Levels/MiniGames/Mole/Krtina2.png" id="4_suaje"]
+[ext_resource type="Texture2D" uid="uid://c7fonk3i54n0y" path="res://Levels/MiniGames/Mole/krtina3.png" id="5_uppws"]
+[ext_resource type="Texture2D" uid="uid://bcbaschpq7fqo" path="res://Levels/MiniGames/Mole/Krtina4.png" id="6_det1y"]
+[ext_resource type="Texture2D" uid="uid://bnwnfiptjoatt" path="res://Levels/MiniGames/Mole/Cekic.png" id="7_uppws"]
+[ext_resource type="Script" uid="uid://b4h5f2eexrib5" path="res://Levels/MiniGames/Mole/cekic.gd" id="8_det1y"]
+[ext_resource type="FontFile" uid="uid://cpu6sw0ehen42" path="res://Utils/Font/LowresPixel-Regular.otf" id="9_det1y"]
+[ext_resource type="PackedScene" uid="uid://bp586yrcwjfe8" path="res://Assets/Effects/dust_particles_jump_left.tscn" id="9_mrwdo"]
+[ext_resource type="PackedScene" uid="uid://crog2nt7mj08n" path="res://Assets/Effects/dust_particles_jump_right.tscn" id="11_p7wow"]
+[ext_resource type="AudioStream" uid="uid://bufmr6dh38ifv" path="res://Assets/Audio/MoleGame/mole_hit.wav" id="12_h82j7"]
+[ext_resource type="AudioStream" uid="uid://bqodcvcuiiisg" path="res://Assets/Audio/MoleGame/+1.wav" id="13_p7wow"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwm4x"]
 radius = 53.5727
@@ -16,7 +21,10 @@ height = 129.382
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwm4x"]
 radius = 24.9699
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_mwm4x"]
+font_size = 50
+
+[node name="MoleGame" type="Node2D"]
 scale = Vector2(1.00798, 0.989318)
 script = ExtResource("1_36d3w")
 
@@ -25,65 +33,77 @@ position = Vector2(574.15, 328.973)
 scale = Vector2(0.992552, 1.00936)
 texture = ExtResource("1_b8gpv")
 
-[node name="Krtina1" type="Sprite2D" parent="."]
+[node name="Krtina1" type="Area2D" parent="."]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(351.199, 186.997)
+position = Vector2(351.199, 185.986)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina1"]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Krtina1" type="Sprite2D" parent="Krtina1"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(3.05176e-05, 1.0108)
 texture = ExtResource("2_b8gpv")
 
-[node name="Area2D" type="Area2D" parent="Krtina1"]
-light_mask = 3
-visibility_layer = 3
-position = Vector2(-1.16825e-05, -1.01078)
+[node name="Marker2D" type="Marker2D" parent="Krtina1"]
+position = Vector2(0.990539, -74.7983)
+
+[node name="Krtina2" type="Area2D" parent="."]
+position = Vector2(752.002, 192.051)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina1/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina2"]
 light_mask = 3
 visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
-[node name="Krtina2" type="Sprite2D" parent="."]
-position = Vector2(752.002, 193.062)
+[node name="Krtina2" type="Sprite2D" parent="Krtina2"]
+position = Vector2(0, 1.01077)
 texture = ExtResource("4_suaje")
 
-[node name="Area2D" type="Area2D" parent="Krtina2"]
-position = Vector2(-1.16825e-05, -1.01078)
+[node name="Marker2D" type="Marker2D" parent="Krtina2"]
+position = Vector2(-0.002967, -74.7985)
+
+[node name="Krtina3" type="Area2D" parent="."]
+position = Vector2(349.214, 465.977)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina2/Area2D"]
-light_mask = 3
-visibility_layer = 3
-shape = SubResource("CapsuleShape2D_mwm4x")
-
-[node name="Krtina3" type="Sprite2D" parent="."]
-position = Vector2(349.214, 466.988)
+[node name="Krtina3" type="Sprite2D" parent="Krtina3"]
+position = Vector2(6.10352e-05, 1.01077)
 texture = ExtResource("5_uppws")
 
-[node name="Area2D" type="Area2D" parent="Krtina3"]
-position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina3/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina3"]
 light_mask = 3
 visibility_layer = 3
 shape = SubResource("CapsuleShape2D_mwm4x")
 
-[node name="Krtina4" type="Sprite2D" parent="."]
-position = Vector2(756.962, 466.988)
+[node name="Marker2D" type="Marker2D" parent="Krtina3"]
+position = Vector2(-0.992779, -74.7984)
+
+[node name="Krtina4" type="Area2D" parent="."]
+position = Vector2(756.962, 465.977)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina4"]
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Krtina4" type="Sprite2D" parent="Krtina4"]
+position = Vector2(6.10352e-05, 1.01077)
 texture = ExtResource("6_det1y")
 
-[node name="Area2D" type="Area2D" parent="Krtina4"]
-position = Vector2(-1.16825e-05, -1.01078)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina4/Area2D"]
-light_mask = 3
-visibility_layer = 3
-shape = SubResource("CapsuleShape2D_mwm4x")
+[node name="Marker2D" type="Marker2D" parent="Krtina4"]
+position = Vector2(-0.00248263, -70.7552)
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("8_det1y")
@@ -91,6 +111,14 @@ script = ExtResource("8_det1y")
 [node name="Cekic" type="Sprite2D" parent="Node2D"]
 position = Vector2(221.235, 132.414)
 texture = ExtResource("7_uppws")
+
+[node name="DustParticlesJumpLeft" parent="Node2D/Cekic" instance=ExtResource("9_mrwdo")]
+position = Vector2(97.2237, -34.3667)
+scale = Vector2(1, 1)
+
+[node name="DustParticlesJumpRight" parent="Node2D/Cekic" instance=ExtResource("11_p7wow")]
+position = Vector2(127.978, -76.8202)
+scale = Vector2(1, 1)
 
 [node name="Area2D" type="Area2D" parent="Node2D/Cekic"]
 position = Vector2(36.7072, -90.9717)
@@ -101,12 +129,46 @@ collision_mask = 3
 position = Vector2(49.6043, 19.2051)
 shape = SubResource("CircleShape2D_mwm4x")
 
+[node name="Dodatni text" type="Label" parent="."]
+offset_left = 39.6833
+offset_top = 11.1188
+offset_right = 238.683
+offset_bottom = 78.1187
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
+text = "/ 5"
+label_settings = SubResource("LabelSettings_mwm4x")
+
+[node name="victory" type="Label" parent="."]
+visible = false
+offset_left = 456.358
+offset_top = 316.38
+offset_right = 655.358
+offset_bottom = 383.38
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
+text = "VICTORY!"
+label_settings = SubResource("LabelSettings_mwm4x")
+
 [node name="score_label" type="Label" parent="."]
-offset_left = 23.8101
-offset_top = 33.3563
-offset_right = 63.8101
-offset_bottom = 56.3563
+offset_left = 5.95251
+offset_top = 9.09718
+offset_right = 130.953
+offset_bottom = 76.0972
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
 text = "0"
+label_settings = SubResource("LabelSettings_mwm4x")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="GroundHit" type="AudioStreamPlayer2D" parent="SFX"]
+scale = Vector2(1.00798, 0.989318)
+stream = ExtResource("12_h82j7")
+
+[node name="ScoreUp" type="AudioStreamPlayer2D" parent="SFX"]
+scale = Vector2(1.00798, 0.989318)
+stream = ExtResource("13_p7wow")
 
 [connection signal="area_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_body_entered"]

@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://chag3bqhw5xhd"]
+
+[ext_resource type="Script" uid="uid://b8prnnvjwkukf" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
+[ext_resource type="Texture2D" uid="uid://ui5vlg8xbolv" path="res://Levels/MiniGames/Mole/Mapa2.png" id="1_b8gpv"]
+[ext_resource type="Texture2D" uid="uid://bpr0bxtf1cpv1" path="res://Levels/MiniGames/Mole/Krtina1.png" id="2_b8gpv"]
+[ext_resource type="Texture2D" uid="uid://cye2tyctrcf20" path="res://Levels/MiniGames/Mole/Krtina2.png" id="4_suaje"]
+[ext_resource type="Texture2D" uid="uid://c7fonk3i54n0y" path="res://Levels/MiniGames/Mole/krtina3.png" id="5_uppws"]
+[ext_resource type="Texture2D" uid="uid://bcbaschpq7fqo" path="res://Levels/MiniGames/Mole/Krtina4.png" id="6_det1y"]
+[ext_resource type="Texture2D" uid="uid://bnwnfiptjoatt" path="res://Levels/MiniGames/Mole/Cekic.png" id="7_uppws"]
+[ext_resource type="Script" uid="uid://b4h5f2eexrib5" path="res://Levels/MiniGames/Mole/cekic.gd" id="8_det1y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwm4x"]
+radius = 53.5727
+height = 129.382
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwm4x"]
+radius = 24.9699
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.00798, 0.989318)
+script = ExtResource("1_36d3w")
+
+[node name="score_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Mapa" type="Sprite2D" parent="."]
+position = Vector2(574.15, 328.973)
+scale = Vector2(0.992552, 1.00936)
+texture = ExtResource("1_b8gpv")
+
+[node name="Krtina1" type="Sprite2D" parent="."]
+position = Vector2(351.199, 186.997)
+texture = ExtResource("2_b8gpv")
+
+[node name="Area2D" type="Area2D" parent="Krtina1"]
+position = Vector2(-1.16825e-05, -1.01078)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina1/Area2D"]
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Krtina2" type="Sprite2D" parent="."]
+position = Vector2(752.002, 193.062)
+texture = ExtResource("4_suaje")
+
+[node name="Area2D" type="Area2D" parent="Krtina2"]
+position = Vector2(-1.16825e-05, -1.01078)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina2/Area2D"]
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Krtina3" type="Sprite2D" parent="."]
+position = Vector2(349.214, 466.988)
+texture = ExtResource("5_uppws")
+
+[node name="Area2D" type="Area2D" parent="Krtina3"]
+position = Vector2(-1.16825e-05, -1.01078)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina3/Area2D"]
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Krtina4" type="Sprite2D" parent="."]
+position = Vector2(756.962, 466.988)
+texture = ExtResource("6_det1y")
+
+[node name="Area2D" type="Area2D" parent="Krtina4"]
+position = Vector2(-1.16825e-05, -1.01078)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Krtina4/Area2D"]
+shape = SubResource("CapsuleShape2D_mwm4x")
+
+[node name="Cekic" type="Sprite2D" parent="."]
+position = Vector2(221.235, 132.414)
+texture = ExtResource("7_uppws")
+script = ExtResource("8_det1y")
+
+[node name="Area2D" type="Area2D" parent="Cekic"]
+position = Vector2(36.7072, -90.9717)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cekic/Area2D"]
+position = Vector2(49.6043, 19.2051)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_mwm4x")
