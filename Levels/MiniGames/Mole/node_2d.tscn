@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chag3bqhw5xhd"]
+[gd_scene load_steps=13 format=3 uid="uid://chag3bqhw5xhd"]
 
 [ext_resource type="Script" uid="uid://b8prnnvjwkukf" path="res://Levels/MiniGames/Mole/Molegejm.gd" id="1_36d3w"]
 [ext_resource type="Texture2D" uid="uid://ui5vlg8xbolv" path="res://Levels/MiniGames/Mole/Mapa2.png" id="1_b8gpv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bcbaschpq7fqo" path="res://Levels/MiniGames/Mole/Krtina4.png" id="6_det1y"]
 [ext_resource type="Texture2D" uid="uid://bnwnfiptjoatt" path="res://Levels/MiniGames/Mole/Cekic.png" id="7_uppws"]
 [ext_resource type="Script" uid="uid://b4h5f2eexrib5" path="res://Levels/MiniGames/Mole/cekic.gd" id="8_det1y"]
+[ext_resource type="FontFile" uid="uid://cpu6sw0ehen42" path="res://Utils/Font/LowresPixel-Regular.otf" id="9_det1y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwm4x"]
 radius = 53.5727
@@ -15,6 +16,9 @@ height = 129.382
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mwm4x"]
 radius = 24.9699
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwm4x"]
+font_size = 50
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.00798, 0.989318)
@@ -101,12 +105,36 @@ collision_mask = 3
 position = Vector2(49.6043, 19.2051)
 shape = SubResource("CircleShape2D_mwm4x")
 
+[node name="Dodatni text" type="Label" parent="."]
+offset_left = 39.6833
+offset_top = 11.1188
+offset_right = 238.683
+offset_bottom = 78.1187
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
+text = "/ 5"
+label_settings = SubResource("LabelSettings_mwm4x")
+
+[node name="victory" type="Label" parent="."]
+visible = false
+offset_left = 456.358
+offset_top = 316.38
+offset_right = 655.358
+offset_bottom = 383.38
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
+text = "VICTORY!"
+label_settings = SubResource("LabelSettings_mwm4x")
+
 [node name="score_label" type="Label" parent="."]
-offset_left = 23.8101
-offset_top = 33.3563
-offset_right = 63.8101
-offset_bottom = 56.3563
+offset_left = 5.95251
+offset_top = 9.09718
+offset_right = 130.953
+offset_bottom = 76.0972
+theme_override_fonts/font = ExtResource("9_det1y")
+theme_override_font_sizes/font_size = 16
 text = "0"
+label_settings = SubResource("LabelSettings_mwm4x")
 
 [connection signal="area_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Node2D/Cekic/Area2D" to="Node2D" method="_on_area_2d_body_entered"]

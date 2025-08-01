@@ -1,4 +1,4 @@
-extends Node2D   # ✅ Cekic should be Node2D
+extends Node2D   
 
 @export var speed := 400    
 @onready var area: Area2D = $Cekic/Area2D
@@ -40,9 +40,9 @@ func play_hit():
 			print("HIT:", mole.name)
 			get_parent().add_score()
 
-#collider after short delay
 	await get_tree().create_timer(0.2).timeout
 	area.monitoring = false
+	await get_tree().create_timer(1.0).timeout
 	is_hitting = false
 
 
@@ -57,10 +57,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			area.visible = false
 			get_parent().add_score()
 
-#collider after short delay
+		#collider after short delay
 		await get_tree().create_timer(0.2).timeout
 		area.monitoring = false
+		#nakon 3 sec se spawnuje collision
+		await get_tree().create_timer(3.0).timeout
 		area.visible = true
+		#tek nakon 1.5s trenutno moze opet da udari,
+		await get_tree().create_timer(2.0).timeout
 		is_hitting = false
 		
 	
