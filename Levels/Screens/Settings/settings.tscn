@@ -1,0 +1,110 @@
+[gd_scene load_steps=4 format=3 uid="uid://by88lr47yw5hw"]
+
+[ext_resource type="Script" uid="uid://jtvqtoic8q81" path="res://Levels/Screens/Settings/settings.gd" id="1_kb38p"]
+[ext_resource type="PackedScene" uid="uid://dw4bg1cc3wnf7" path="res://Game/Audio/volume_slider.tscn" id="1_xtqq6"]
+[ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://Levels/Screens/InputSettings/input_settings.tscn" id="3_3yai5"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kb38p")
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -105.0
+offset_right = 119.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="Menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Resume"
+
+[node name="Audio" type="HBoxContainer" parent="Menu"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Menu/Audio"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Menu/Audio/Labels"]
+layout_mode = 2
+text = "Master"
+
+[node name="Music" type="Label" parent="Menu/Audio/Labels"]
+layout_mode = 2
+text = "Music"
+
+[node name="SFX" type="Label" parent="Menu/Audio/Labels"]
+layout_mode = 2
+text = "SFX"
+
+[node name="Sliders" type="VBoxContainer" parent="Menu/Audio"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="master" parent="Menu/Audio/Sliders" instance=ExtResource("1_xtqq6")]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 1.0
+bus_name = "Master"
+
+[node name="music" parent="Menu/Audio/Sliders" instance=ExtResource("1_xtqq6")]
+layout_mode = 2
+value = 1.0
+bus_name = "Music"
+
+[node name="sfx" parent="Menu/Audio/Sliders" instance=ExtResource("1_xtqq6")]
+layout_mode = 2
+value = 1.0
+bus_name = "SFX"
+
+[node name="FullscreenBox" type="HBoxContainer" parent="Menu"]
+layout_mode = 2
+
+[node name="Fullscreen" type="Label" parent="Menu/FullscreenBox"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Spacer" type="Control" parent="Menu/FullscreenBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="CheckBox" type="CheckBox" parent="Menu/FullscreenBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Controls" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Controls"
+
+[node name="Exit" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Exit"
+
+[node name="InputSettings" parent="." instance=ExtResource("3_3yai5")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Menu/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu/FullscreenBox/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="pressed" from="Menu/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="InputSettings/PanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+
+[editable path="InputSettings"]

@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var input_settings: Control = $HUD/InputSettings
+@onready var settings: Control = $HUD/Settings
+
 
 
 var lights_on = false;
@@ -33,11 +34,7 @@ func enable_lights(state: bool) -> void:
 		
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		game_paused = !game_paused
-		if game_paused:
-			Engine.time_scale = 0
-			input_settings.visible = true;
-		else:
-			Engine.time_scale = 1
-			input_settings.visible = false;
+		Engine.time_scale = 0
+		settings.visible = true;
+	
 		get_tree().root.get_viewport().set_input_as_handled()
