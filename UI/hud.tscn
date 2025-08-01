@@ -15,10 +15,12 @@ offset_bottom = 128.0
 scale = Vector2(0.5, 0.5)
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 990.0
-offset_top = 18.0
-offset_right = 1115.0
-offset_bottom = 85.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_bottom = 67.0
+grow_horizontal = 0
 theme_override_fonts/font = ExtResource("2_bytes")
 theme_override_font_sizes/font_size = 16
 label_settings = SubResource("LabelSettings_ne75i")
