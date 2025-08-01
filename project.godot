@@ -22,6 +22,7 @@ DialogueManager="*res://Singleton/DialogueManager/dialogue_manager.tscn"
 InteractionManager="*res://Utils/Interaction/interaction_manager/InteractionManager.tscn"
 Hud="*res://UI/hud.tscn"
 SceneManager="*res://Singleton/SceneManager/scene_manager.tscn"
+DamageNumbers="*res://Singleton/DamageNumbers/damage_numbers.tscn"
 
 [editor_plugins]
 
