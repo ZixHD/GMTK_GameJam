@@ -47,11 +47,19 @@ text = "Exit"
 visible = false
 layout_mode = 1
 
-[node name="BackButton" parent="Settings/InputSettings/PanelContainer/MarginContainer/VBoxContainer" index="2"]
+[node name="Resume" parent="Settings/Menu" index="0"]
 visible = false
+
+[node name="Exit" parent="Settings/Menu" index="4"]
+visible = false
+
+[node name="Return" type="Button" parent="Settings/Menu" index="5"]
+layout_mode = 2
+text = "Return"
 
 [connection signal="pressed" from="Buttons/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings/Menu/Return" to="." method="_on_resume_2_pressed"]
 
 [editable path="Settings"]
 [editable path="Settings/InputSettings"]
