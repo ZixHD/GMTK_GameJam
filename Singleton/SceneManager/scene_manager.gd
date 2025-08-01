@@ -16,7 +16,7 @@ const MAIN_MENU = preload("res://Levels/Screens/MainMenu/main_menu.tscn")
 
 
 
-func _start_game() -> void:
+func start_game() -> void:
 	var village = VILLAGE.instantiate()
 	add_child(village)
 	

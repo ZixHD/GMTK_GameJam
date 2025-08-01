@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=16 format=4 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://Levels/Screens/Settings/settings.tscn" id="10_8jtfi"]
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
-[ext_resource type="PackedScene" uid="uid://chag3bqhw5xhd" path="res://Levels/MiniGames/Mole/mole.tscn" id="13_82lha"]
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dggnu"]
@@ -56,10 +55,16 @@ position = Vector2(150, 118)
 [node name="Lights" type="Node2D" parent="."]
 
 [node name="StreetLight" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(381, 300)
+position = Vector2(247, 179)
 
 [node name="StreetLight2" parent="Lights" instance=ExtResource("6_7027k")]
-position = Vector2(469, 330)
+position = Vector2(466, 179)
+
+[node name="StreetLight3" parent="Lights" instance=ExtResource("6_7027k")]
+position = Vector2(687, 179)
+
+[node name="StreetLight4" parent="Lights" instance=ExtResource("6_7027k")]
+position = Vector2(890, 179)
 
 [node name="Player" parent="." instance=ExtResource("1_i01ol")]
 position = Vector2(950, 137)
@@ -89,4 +94,16 @@ position = Vector2(990.8, 191.8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mole/InteractionArea"]
 shape = SubResource("RectangleShape2D_tc7al")
 
-[node name="MoleMinigame" parent="." instance=ExtResource("13_82lha")]
+[node name="Markers" type="Node" parent="."]
+
+[node name="MarkerTop" type="Marker2D" parent="Markers"]
+position = Vector2(627, 0)
+
+[node name="MarkerBottom" type="Marker2D" parent="Markers"]
+position = Vector2(478, 656)
+
+[node name="MarkerLeft" type="Marker2D" parent="Markers"]
+position = Vector2(0, 321)
+
+[node name="MarkerRight" type="Marker2D" parent="Markers"]
+position = Vector2(1153, 323)
