@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1b85ocxeo0c"
-path="res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"
+uid="uid://cnonmhp2483fn"
+path="res://.godot/imported/kid.png-a8aa988d9b19ea45905e490f5dc893f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/flowers/flower3.png"
-dest_files=["res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"]
+source_file="res://Entity/NPCs/Kid/kid.png"
+dest_files=["res://.godot/imported/kid.png-a8aa988d9b19ea45905e490f5dc893f8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1b85ocxeo0c"
-path="res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"
+uid="uid://bmeq8crhd72oe"
+path="res://.godot/imported/gardenman.png-f58d392cf163380d801ba0a22e6e77e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/flowers/flower3.png"
-dest_files=["res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"]
+source_file="res://Entity/NPCs/Gardener/gardenman.png"
+dest_files=["res://.godot/imported/gardenman.png-f58d392cf163380d801ba0a22e6e77e6.ctex"]
 
 [params]
 

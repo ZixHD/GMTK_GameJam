@@ -1,26 +1,110 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1p6rcibegyf7"]
+[gd_scene load_steps=11 format=3 uid="uid://b8uy588yv2iry"]
 
-[ext_resource type="Texture2D" uid="uid://baidtos1jnpr1" path="res://Assets/Fishing/fishing_sprites.png" id="1_j3ylo"]
+[ext_resource type="Script" uid="uid://b7q5x6wayt5vf" path="res://Levels/MiniGames/Fishing/fishing.gd" id="1_gfh0f"]
+[ext_resource type="Texture2D" uid="uid://dxt36ohtjklrt" path="res://Assets/Fishing/fishing_rod_hud.png" id="1_j3ylo"]
+[ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="2_klcyd"]
+[ext_resource type="Script" uid="uid://datqfcfwj226s" path="res://Levels/MiniGames/Fishing/player.gd" id="2_xj2ss"]
+[ext_resource type="Script" uid="uid://byrhumenra8rm" path="res://Levels/MiniGames/Fishing/fish.gd" id="3_gfh0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj2ss"]
+size = Vector2(74, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klcyd"]
+size = Vector2(112.75, 96.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfh0f"]
+size = Vector2(122, 79.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3ylo"]
+size = Vector2(71.2752, 82.9397)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfrrj"]
+size = Vector2(72.625, 84.75)
 
 [node name="Fishing" type="Node"]
+script = ExtResource("1_gfh0f")
 
-[node name="Fish" type="CharacterBody2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-388.444, -65.5962)
+scale = Vector2(16.8548, 9.74615)
+texture = ExtResource("1_j3ylo")
+offset = Vector2(40, 40)
+region_enabled = true
+region_rect = Rect2(0, 14.199, 31.7745, 65.801)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
+[node name="Fish" type="CharacterBody2D" parent="." groups=["Fish"]]
+position = Vector2(297, 412)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("3_gfh0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="Fish"]
-texture_filter = 1
+position = Vector2(7, -2.00001)
+scale = Vector2(0.574707, 0.578614)
+texture = ExtResource("2_klcyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_xj2ss")
+
+[node name="Top" type="StaticBody2D" parent="."]
+position = Vector2(305, -27)
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_klcyd")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+position = Vector2(309, 682)
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+shape = SubResource("RectangleShape2D_gfh0f")
+
+[node name="Reel" type="Sprite2D" parent="."]
+position = Vector2(82, 592)
+scale = Vector2(9.96154, 10.25)
 texture = ExtResource("1_j3ylo")
-hframes = 13
-vframes = 9
-frame = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 13.8615, 12.3902)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = 615.0
+offset_right = -149.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+value = 70.0
+nine_patch_stretch = true
+texture_progress = ExtResource("2_klcyd")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(306, 123)
+collision_mask = 4
+script = ExtResource("2_xj2ss")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(1, 2.86102e-06)
+scale = Vector2(36, 42)
+texture = ExtResource("1_j3ylo")
+region_enabled = true
+region_rect = Rect2(22.9786, 3.97559, 2.04749, 2.05335)
 
-[node name="Area2D" type="Area2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(1.3624, -0.469849)
+shape = SubResource("RectangleShape2D_j3ylo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+[node name="Detect" type="Area2D" parent="Player"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Detect"]
+position = Vector2(2, 0.375)
+shape = SubResource("RectangleShape2D_cfrrj")
+
+[connection signal="body_entered" from="Player/Detect" to="Player" method="_on_detect_body_entered"]
+[connection signal="body_exited" from="Player/Detect" to="Player" method="_on_detect_body_exited"]

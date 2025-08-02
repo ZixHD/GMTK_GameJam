@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1b85ocxeo0c"
-path="res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"
+uid="uid://djefpdt1lvy58"
+path="res://.godot/imported/hunter.png-1fb6e74fa4811649cf6f282c7084fea1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/flowers/flower3.png"
-dest_files=["res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"]
+source_file="res://Entity/NPCs/Hunter/hunter.png"
+dest_files=["res://.godot/imported/hunter.png-1fb6e74fa4811649cf6f282c7084fea1.ctex"]
 
 [params]
 

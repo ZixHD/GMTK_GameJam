@@ -1,0 +1,184 @@
+[gd_scene load_steps=13 format=3 uid="uid://dj3s83c4g2xjm"]
+
+[ext_resource type="Script" uid="uid://b4y3pas2l6emo" path="res://Entity/NPCs/Girl1/girl_1.gd" id="1_kmyjr"]
+[ext_resource type="Texture2D" uid="uid://cq236q8ulhpfx" path="res://Entity/NPCs/Girl1/girl2.png" id="1_xtmp8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtmp8"]
+size = Vector2(10, 10)
+
+[sub_resource type="Animation" id="Animation_h2vpq"]
+length = 1.17
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 9, 7]
+}
+
+[sub_resource type="Animation" id="Animation_foo50"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 5, 1]
+}
+
+[sub_resource type="Animation" id="Animation_803wu"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 3]
+}
+
+[sub_resource type="Animation" id="Animation_yqni5"]
+length = 0.17
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+
+[sub_resource type="Animation" id="Animation_kmyjr"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+
+[sub_resource type="Animation" id="Animation_jgrr4"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [13, 3, 14, 3]
+}
+
+[sub_resource type="Animation" id="Animation_hffwa"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 11]
+}
+
+[sub_resource type="Animation" id="Animation_6pvel"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ofq87"]
+_data = {
+&"idle ": SubResource("Animation_h2vpq"),
+&"idle L": SubResource("Animation_foo50"),
+&"idle R": SubResource("Animation_803wu"),
+&"idle back": SubResource("Animation_yqni5"),
+&"walk L": SubResource("Animation_kmyjr"),
+&"walk R": SubResource("Animation_jgrr4"),
+&"walk back": SubResource("Animation_hffwa"),
+&"walk front": SubResource("Animation_6pvel")
+}
+
+[node name="Girl1" type="CharacterBody2D"]
+script = ExtResource("1_kmyjr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_xtmp8")
+hframes = 4
+vframes = 4
+frame = 7
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"slice": "",
+"source": "res://Assets/Entity/NPCs/girl2.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "749288e331b182f8716c26ae30e1761b"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_xtmp8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ofq87")
+}
+
+[node name="Timer" type="Timer" parent="."]

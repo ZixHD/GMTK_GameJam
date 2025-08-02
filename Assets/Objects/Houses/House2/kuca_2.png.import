@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1b85ocxeo0c"
-path="res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"
+uid="uid://0tx7yksdtwdf"
+path="res://.godot/imported/kuca_2.png-122940800fccabccab623d0f14fa7cd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/flowers/flower3.png"
-dest_files=["res://.godot/imported/flower3.png-6a6cc41bebe4eee89151925ff03cfed1.ctex"]
+source_file="res://Assets/Objects/Houses/House2/kuca_2.png"
+dest_files=["res://.godot/imported/kuca_2.png-122940800fccabccab623d0f14fa7cd3.ctex"]
 
 [params]
 

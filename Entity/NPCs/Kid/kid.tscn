@@ -1,0 +1,184 @@
+[gd_scene load_steps=13 format=3 uid="uid://bbchh167r6lu3"]
+
+[ext_resource type="Texture2D" uid="uid://cnonmhp2483fn" path="res://Entity/NPCs/Kid/kid.png" id="1_7wn2g"]
+[ext_resource type="Script" uid="uid://b4spq10w5nctv" path="res://Entity/NPCs/Kid/kid.gd" id="1_ot4sd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot4sd"]
+size = Vector2(10, 9.5)
+
+[sub_resource type="Animation" id="Animation_kbv3i"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 8, 7]
+}
+
+[sub_resource type="Animation" id="Animation_rx7gi"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [4, 6, 4]
+}
+
+[sub_resource type="Animation" id="Animation_biftr"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [4, 6, 4]
+}
+
+[sub_resource type="Animation" id="Animation_h1y22"]
+length = 0.17
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_s56hr"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 4]
+}
+
+[sub_resource type="Animation" id="Animation_ot4sd"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1]
+}
+
+[sub_resource type="Animation" id="Animation_xwk54"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 12]
+}
+
+[sub_resource type="Animation" id="Animation_e4mqu"]
+length = 0.68
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.17, 0.34, 0.51),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [9, 7, 10, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nfq01"]
+_data = {
+&"idle": SubResource("Animation_kbv3i"),
+&"idle L": SubResource("Animation_rx7gi"),
+&"idle R": SubResource("Animation_biftr"),
+&"idle back": SubResource("Animation_h1y22"),
+&"walk L": SubResource("Animation_s56hr"),
+&"walk R": SubResource("Animation_ot4sd"),
+&"walk back": SubResource("Animation_xwk54"),
+&"walk front": SubResource("Animation_e4mqu")
+}
+
+[node name="Kid" type="CharacterBody2D"]
+script = ExtResource("1_ot4sd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_7wn2g")
+hframes = 4
+vframes = 4
+frame = 11
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"slice": "",
+"source": "res://Assets/Entity/NPCs/kid.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "69d094d1779c18a041a41c556e823de0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_ot4sd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nfq01")
+}
+
+[node name="Timer" type="Timer" parent="."]
