@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://coon3wwntg0xb"]
+[gd_scene load_steps=28 format=4 uid="uid://coon3wwntg0xb"]
 
 [ext_resource type="PackedScene" uid="uid://cqyu22gbmv1v6" path="res://Entity/Player/player.tscn" id="1_i01ol"]
 [ext_resource type="Script" uid="uid://gb45kk8y7tu" path="res://Levels/Village/VillageScript.gd" id="1_uhafy"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bbchh167r6lu3" path="res://Entity/NPCs/Kid/kid.tscn" id="13_bjdx3"]
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
 [ext_resource type="PackedScene" uid="uid://c87fnoo6wcydy" path="res://Entity/NPCs/Fisherman/fisherman.tscn" id="14_3nvq8"]
+[ext_resource type="Script" uid="uid://b8nhlr160x4kx" path="res://Levels/Village/mole_hole.gd" id="20_hetn8"]
 [ext_resource type="PackedScene" uid="uid://dj63lxtt5q7g4" path="res://Entity/Objects/Houses/House2/house_2.tscn" id="21_jch05"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dggnu"]
@@ -141,6 +142,7 @@ gradient = ExtResource("4_uhafy")
 visible = false
 
 [node name="Mole" type="Node" parent="."]
+script = ExtResource("20_hetn8")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mole"]
 position = Vector2(990.8, 191.8)
@@ -166,3 +168,5 @@ position = Vector2(0, 321)
 
 [node name="MarkerRight" type="Marker2D" parent="Markers"]
 position = Vector2(1153, 323)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

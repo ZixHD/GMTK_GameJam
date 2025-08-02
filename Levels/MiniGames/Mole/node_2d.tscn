@@ -114,11 +114,9 @@ texture = ExtResource("7_uppws")
 
 [node name="DustParticlesJumpLeft" parent="Node2D/Cekic" instance=ExtResource("9_mrwdo")]
 position = Vector2(97.2237, -34.3667)
-scale = Vector2(1, 1)
 
 [node name="DustParticlesJumpRight" parent="Node2D/Cekic" instance=ExtResource("11_p7wow")]
 position = Vector2(127.978, -76.8202)
-scale = Vector2(1, 1)
 
 [node name="Area2D" type="Area2D" parent="Node2D/Cekic"]
 position = Vector2(36.7072, -90.9717)

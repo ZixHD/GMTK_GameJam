@@ -65,6 +65,5 @@ func add_score():
 			krtina_3.visible = false
 			krtina_4.visible = false	
 			victory.visible = true
-			get_tree().paused = true
-			await get_tree().create_timer(victory_pause_time).timeout
+			SceneManager.return_to_world()
 			print("pobeda")
