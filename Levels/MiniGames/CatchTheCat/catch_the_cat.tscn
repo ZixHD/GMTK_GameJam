@@ -1,14 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmp3xljte8tw4"]
+[gd_scene load_steps=15 format=3 uid="uid://cmp3xljte8tw4"]
 
 [ext_resource type="PackedScene" uid="uid://bvf55glceexvf" path="res://Entity/Minigames/Cat/cat.tscn" id="1_hym2a"]
 [ext_resource type="Script" uid="uid://c6idogu3ctjqb" path="res://Levels/MiniGames/CatchTheCat/catch_the_cat.gd" id="1_xaawa"]
 [ext_resource type="PackedScene" uid="uid://xsld0t0bvern" path="res://Entity/Minigames/Cat/bucket.tscn" id="2_f6qt0"]
+[ext_resource type="Texture2D" uid="uid://salnjn8u7mxg" path="res://Levels/MiniGames/CatchTheCat/Mapa2aaaaaa2222a.png" id="2_wtcit"]
+[ext_resource type="Texture2D" uid="uid://d1ogpuf3jcbi6" path="res://Levels/MiniGames/CatchTheCat/vreca.png" id="4_cr88w"]
+[ext_resource type="Texture2D" uid="uid://5rafhwfdd67t" path="res://Levels/MiniGames/CatchTheCat/Macka.png" id="4_wtcit"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u80tl"]
+atlas = ExtResource("4_wtcit")
+region = Rect2(120, 0, 40, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nxj7"]
+atlas = ExtResource("4_wtcit")
+region = Rect2(160, 0, 40, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ixxp"]
+atlas = ExtResource("4_wtcit")
+region = Rect2(200, 0, 40, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nlnfd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u80tl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nxj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ixxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_enxsn"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("Bucket:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -48,11 +80,42 @@ size = Vector2(1550, 13)
 [node name="CatchTheCat" type="Node"]
 script = ExtResource("1_xaawa")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+texture = ExtResource("2_wtcit")
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "Cat/AnimationPlayer",
+"slice": "",
+"source": "res://Levels/MiniGames/CatchTheCat/Macka.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d2c8bf6e09632ba7fd9e4df35a4ea3f5"
+
 [node name="Cat" parent="." instance=ExtResource("1_hym2a")]
-position = Vector2(662, 97)
+position = Vector2(825, 111)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_nlnfd")
+frame_progress = 0.622238
 
 [node name="Bucket" parent="." instance=ExtResource("2_f6qt0")]
-position = Vector2(79, 561)
+position = Vector2(80, 507)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Bucket"]
+position = Vector2(-18, 36)
+scale = Vector2(2, 2)
+texture = ExtResource("4_cr88w")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

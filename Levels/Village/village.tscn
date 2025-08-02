@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://blceu33mmirba" path="res://Assets/icon.svg" id="11_nut6m"]
 [ext_resource type="PackedScene" uid="uid://dj3s83c4g2xjm" path="res://Entity/NPCs/Girl1/girl_1.tscn" id="11_tgoqq"]
 [ext_resource type="PackedScene" uid="uid://bby1i2ha235x3" path="res://Entity/NPCs/Gardener/gardener.tscn" id="12_5jamd"]
-[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
+[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/interaction/interaction_area/interaction_area.tscn" id="12_82lha"]
 [ext_resource type="PackedScene" uid="uid://bbchh167r6lu3" path="res://Entity/NPCs/Kid/kid.tscn" id="13_bjdx3"]
 [ext_resource type="Texture2D" uid="uid://de38mblvdixbn" path="res://Assets/TileSets/tileset_overworld.png" id="13_tc7al"]
 [ext_resource type="PackedScene" uid="uid://c87fnoo6wcydy" path="res://Entity/NPCs/Fisherman/fisherman.tscn" id="14_3nvq8"]

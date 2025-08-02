@@ -3,7 +3,7 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kaaeb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oec4i"]
-size = Vector2(64, 6.5)
+size = Vector2(109, 6.5)
 
 [node name="Bucket" type="Area2D"]
 
@@ -11,5 +11,5 @@ size = Vector2(64, 6.5)
 texture = SubResource("CompressedTexture2D_kaaeb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 31.75)
+position = Vector2(-1.5, 31.75)
 shape = SubResource("RectangleShape2D_oec4i")
