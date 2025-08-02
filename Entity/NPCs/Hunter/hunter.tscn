@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://djdh5jjhb4oly"]
+[gd_scene load_steps=16 format=3 uid="uid://djdh5jjhb4oly"]
 
 [ext_resource type="Script" uid="uid://cnih66ivccwoy" path="res://Entity/NPCs/Hunter/hunter.gd" id="1_nuwv0"]
 [ext_resource type="Texture2D" uid="uid://djefpdt1lvy58" path="res://Entity/NPCs/Hunter/hunter.png" id="1_ydyn6"]
+[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="3_8ccu8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuwv0"]
 size = Vector2(10, 7)
@@ -163,6 +164,9 @@ _data = {
 &"wave": SubResource("Animation_eheyh")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp2wk"]
+size = Vector2(33.5, 33)
+
 [node name="Hunter" type="CharacterBody2D"]
 script = ExtResource("1_nuwv0")
 
@@ -199,3 +203,11 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_8ccu8")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_lp2wk")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -18)

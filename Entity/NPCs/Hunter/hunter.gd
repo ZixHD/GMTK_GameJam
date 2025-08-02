@@ -4,7 +4,14 @@ extends CharacterBody2D
 @onready var animation: AnimationPlayer = $AnimationPlayer
 @export var speed: float = 25.0
 @onready var timer: Timer = $Timer
+@onready var interaction_area: InteractionArea = $InteractionArea
+@onready var marker_2d: Marker2D = $Marker2D
 
+
+const lines: Array[String] = [
+	"Hey, Can",
+	"hiiii",
+]
 var direction: Vector2 = Vector2.ZERO
 var max_distance: int = 50
 enum state { IDLE_LEFT, IDLE_RIGHT, WALK_LEFT, WALK_RIGHT }
@@ -15,6 +22,7 @@ var move: bool = true;
 var turn_around: bool = true;
 
 func _ready() -> void:
+	interaction_area.interact = Callable(self, "_on_interact")
 	spawn_position = global_position
 	timer.timeout.connect(_on_timer_timeout)
 	timer.wait_time = 2.0
@@ -71,5 +79,10 @@ func _on_timer_timeout() -> void:
 	move = true
 	_update_animation()
 	spawn_position = global_position
+	
+func _on_interact():
+	DialogueManager.start_dialog(marker_2d.global_position, lines)
+	
+
 	
 	

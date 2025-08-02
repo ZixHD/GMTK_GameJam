@@ -103,7 +103,7 @@ position = Vector2(890, 179)
 [node name="Entities" type="Node" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("1_i01ol")]
-position = Vector2(337, 373)
+position = Vector2(607, 167)
 scale = Vector2(1, 1)
 speed = 200.0
 
