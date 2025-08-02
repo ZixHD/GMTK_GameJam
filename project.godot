@@ -40,6 +40,10 @@ folder_colors={
 "res://addons/": "teal"
 }
 
+[global_group]
+
+Fish=""
+
 [input]
 
 interact={
