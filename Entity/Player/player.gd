@@ -4,10 +4,20 @@ extends CharacterBody2D
 @export var speed: float = 150.0
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
+
+const lines: Array[String] = [
+	"What a beutiful day!",
+	"That must be Rex",
+	"It's Sunday again?",
+	"Maybe it was a dream",
+	"No way!",
+	"I must be cursed"
+]
 var input: Vector2 = Vector2.ZERO
 enum state {IDLE_RIGHT, IDLE_LEFT, IDLE_UP, IDLE_DOWN, WALK_RIGHT, WALK_LEFT, WALK_UP, WALK_DOWN, PAUSED}
 var player_state = state.IDLE_LEFT
 var last_state_before_reading: state = state.IDLE_RIGHT;
+
 
 
 func _update_animation():
